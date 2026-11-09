@@ -7,9 +7,11 @@
 
 O Instituto Nacional de Meteorologia - INMET fornece dados públicos oficiais de chuvas do território nacional, em arquivos anuais, com o ano vigente sendo reescrito mensalmente. Os dados são capturados em estações automáticas com dados horários.
 
-Dados do Espírito Santo constam a partir de 2006, com cobertura razoável a partir de 2008, sendo atualmente fornecidos por onze estações, podendo ser capturados em pasta zipada, identificando os arquivos de interesse através da seguinte estrutura:
+Dados do Espírito Santo constam a partir de 2006, com cobertura razoável a partir de 2008, sendo atualmente fornecidos por onze estações (atualmente com duas em pane, segundo o catálogo do INMET de outubro de 2026), podendo ser capturados em pasta zipada, identificando os arquivos de interesse através da seguinte estrutura:
 
-INMET_SE_ES_[restante_do_nome_do_arquivo]
+`INMET_SE_ES_*.csv`
+
+Observação: O arquivo do ano anterior também pode ser revisado nos primeiros meses do ano seguinte (o de 2025 foi alterado em março de 2026).
 
 ## Decisão
 
