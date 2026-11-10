@@ -24,8 +24,6 @@ Os testes funcionaram, mostrando que o caminho seguido não funciona e rejeitand
 - Ler uma conexão por camadas (DNS → TCP → TLS → HTTP);
 - Controle positivo e o fato de que “verde ≠ sucesso”.
 
-## O que vou mudar na próxima sprint
-
 ## Impacto no plano
 
 O portal do INMET bloqueia clientes automatizados, independentemente da origem: os ZIPs são para download humano. O robô não poderá baixá-los. O caminho passa a ser a API oficial do INMET com token (a registrar no ADR 0002), com download manual mensal como alternativa provisória.
