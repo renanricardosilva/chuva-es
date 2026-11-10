@@ -11,7 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Teste no site gov.br
+      - name: Controle 1 - Teste no site Github.com
+        run: curl --head --fail --silent --show-error --max-time 60 https://github.com
+        continue-on-error: true
+      - name: Controle 2 - Teste no site gov.br
         run: curl --head --fail --silent --show-error --max-time 60 https://www.gov.br/pt-br
         continue-on-error: true
       - name: Cabeçalhos do arquivo de 2026
