@@ -11,7 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Teste no site gov.br
+        run: curl --head --fail --silent --show-error --max-time 60 https://www.gov.br/pt-br
+        continue-on-error: true
       - name: Cabeçalhos do arquivo de 2026
-        run: curl --head --fail --silent --show-error --max-time 60 https://portal.inmet.gov.br/uploads/dadoshistoricos/2026.zip
+        run: curl --head --fail --verbose --max-time 60 https://portal.inmet.gov.br/uploads/dadoshistoricos/2026.zip
+        continue-on-error: true
       - name: Cabeçalhos do arquivo de 2025
-        run: curl --head --fail --silent --show-error --max-time 60 https://portal.inmet.gov.br/uploads/dadoshistoricos/2025.zipgit 
+        run: curl --head --fail --verbose --max-time 60 https://portal.inmet.gov.br/uploads/dadoshistoricos/2025.zip
+        continue-on-error: true
