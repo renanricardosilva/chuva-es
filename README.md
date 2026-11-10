@@ -20,7 +20,7 @@ As chuvas no Espírito Santo apresentam regionalidades ao longo do território, 
 
 ## Roteiro
 
-- [ ] Etapa 0 — Fundação: repositório, documentação e sonda do INMET
+- [x] Etapa 0 — Fundação: repositório, documentação e sonda do INMET
 - [ ] Etapa 1 — Entendimento dos dados
 - [ ] Etapa 2 — Extração e transformação (ETL)
 - [ ] Etapa 3 — Robô diário de verificação e atualização
