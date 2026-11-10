@@ -26,6 +26,12 @@ Os testes funcionaram, mostrando que o caminho seguido não funciona e rejeitand
 
 ## O que vou mudar na próxima sprint
 
-Estabelecer rotina obrigatória, como sempre rodar git status para entender se há commits, por exemplo. Também irei explorar melhor as possibilidades, antes de apenas levantar hipóteses, como o fato de se ter API do INMET.
-O plano mudou
-Não editar arquivos de um ramo depois de abrir o PR sem fazer commit.
+## Impacto no plano
+
+O portal do INMET bloqueia clientes automatizados, independentemente da origem: os ZIPs são para download humano. O robô não poderá baixá-los. O caminho passa a ser a API oficial do INMET com token (a registrar no ADR 0002), com download manual mensal como alternativa provisória.
+
+## O que vou mudar na próxima sprint
+
+- Rodar `git status` antes de todo commit e de toda troca de ramo.
+- Pesquisar a documentação disponível antes de levantar hipóteses (a existência da API teria aparecido numa leitura prévia).
+- Não editar arquivos de um ramo depois de abrir o PR sem fazer commit.
