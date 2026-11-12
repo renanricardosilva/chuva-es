@@ -54,7 +54,7 @@ O painel compara o ano atual (ou um ano escolhido) com a série histórica, por 
 - **Robô diário** que verifica diariamente se o INMET publicou dados novos e os processa
 - **Banco de dados** PostgreSQL/PostGIS com estações, municípios e regiões
 - **Mapas no QGIS** do estado e distribuição da chuva
-- **Painel no Power BI** com análises por regionalizadas
+- **Painel no Power BI** com análises regionalizadas
 
 ## Fonte dos dados
 
