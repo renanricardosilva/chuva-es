@@ -64,10 +64,10 @@ O painel compara o ano atual (ou um ano escolhido) com a série histórica, por 
 ## Roteiro
 
 - [x] Etapa 0 — Fundação: repositório, documentação e sonda do INMET
-- [ ] Etapa 1 — Entendimento dos dados
+- [x] Etapa 1 — Entendimento dos dados (estação Vitória - A612)
 - [ ] Etapa 2 — Extração e transformação (ETL)
-- [ ] Etapa 3 — Robô diário de verificação e atualização
-- [ ] Etapa 4 — Modelagem e banco de dados
+- [ ] Etapa 3 — Modelagem e banco de dados
+- [ ] Etapa 4 — Robô diário de verificação e atualização
 - [ ] Etapa 5 — Mapas no QGIS
 - [ ] Etapa 6 — Do QGIS ao código (PostGIS)
 - [ ] Etapa 7 — Painel no Power BI
@@ -75,4 +75,7 @@ O painel compara o ano atual (ou um ano escolhido) com a série histórica, por 
 
 ## Status
 
-🚧 Em construção — Etapa 0.
+🚧 Em construção — Etapa 1 concluída para a estação de Vitória (A612).
+
+- **Destaque:** [exploração dos dados de Vitória, 2021–2025](notebooks/01-exploracao-vitoria.ipynb): leitura dos arquivos do INMET, análise de completude, investigação das falhas da estação e primeiras análises da chuva.
+- **Próximo passo:** carga dos dados num banco PostgreSQL.
