@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dados brutos do INMET: baixados do portal, não versionados
+data/raw/
