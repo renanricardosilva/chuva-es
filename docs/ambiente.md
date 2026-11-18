@@ -17,6 +17,8 @@ Como recriar o ambiente do projeto do zero, no Windows.
 
 Verificação: `SELECT postgis_full_version();` no banco `ambiental_es` deve retornar a versão do PostGIS. O banco usa a codificação UTF8.
 
+**Atenção à codificação no Windows:** o `psql` usa, por padrão, a codificação do terminal (WIN1252), e não a dos arquivos do projeto (UTF-8). Por isso, os scripts SQL começam com `SET client_encoding = 'UTF8';`; sem essa linha, os acentos são gravados corrompidos. Os acentos podem continuar aparecendo errados na **tela** do terminal, mas o dado gravado está correto.
+
 ## Python
 
 1. Criar e ativar o ambiente virtual (`.venv`) e instalar as dependências: `pip install -r requirements.txt`.
