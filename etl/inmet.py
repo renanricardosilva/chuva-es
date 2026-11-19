@@ -20,7 +20,13 @@ def read_station_code(path):
                 return value.strip()
     raise ValueError(f'Código da estação não encontrado no cabeçalho de {path}')
 
-
+def is_current_format(path):
+    """Indica se o arquivo usa o formato adotado pelo INMET a partir de 2019."""
+    with open(path, encoding=ENCODING) as file:
+        for _ in range(METADATA_LINES):
+            file.readline()
+        return file.readline().startswith('Data;Hora UTC')
+    
 def read_inmet(path):
     """Lê os dados horários de um CSV do INMET no formato usado a partir de 2019.
 
