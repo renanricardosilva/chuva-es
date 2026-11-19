@@ -27,14 +27,15 @@ INMET_DIR = Path('data/raw/inmet')
 
 SUMMARY = text("""
     SELECT e.codigo, e.nome,
-           count(*) AS linhas,
-           count(*) - count(m.valor) AS nulos,
-           (min(m.data_hora_utc) AT TIME ZONE 'UTC')::date AS inicio,
-           (max(m.data_hora_utc) AT TIME ZONE 'UTC')::date AS fim
+           extract(year FROM m.data_hora_utc AT TIME ZONE 'UTC')::int AS ano,
+           count(*) FILTER (WHERE v.codigo = 'precipitacao') AS horas,
+           count(*) FILTER (WHERE v.codigo = 'precipitacao' AND m.valor IS NULL) AS sem_chuva,
+           count(*) FILTER (WHERE v.codigo = 'temperatura_ar' AND m.valor IS NULL) AS sem_temperatura
     FROM f_medicao AS m
     JOIN dim_estacao AS e USING (id_estacao)
-    GROUP BY e.codigo, e.nome
-    ORDER BY e.codigo;
+    JOIN dim_variavel AS v USING (id_variavel)
+    GROUP BY e.codigo, e.nome, ano
+    ORDER BY e.codigo, ano;
 """)
 
 def load_file(conn, path, variable_ids):
@@ -82,9 +83,13 @@ def main():
 
     with engine.connect() as conn:
         summary = conn.execute(SUMMARY).all()
-    print('Situação da f_medicao por estação:')
-    for codigo, nome, linhas, nulos, inicio, fim in summary:
-        print(f'  {codigo} {nome:<25} {linhas:>7} linhas | {nulos:>6} nulos | {inicio} a {fim}')
+    print('Situação da f_medicao por estação e ano (horas sem registro):')
+    current = None
+    for codigo, nome, ano, horas, sem_chuva, sem_temperatura in summary:
+        if codigo != current:
+            print(f'\n  {codigo} {nome}')
+            current = codigo
+        print(f'    {ano}: {horas:>5} h | sem chuva: {sem_chuva:>5} | sem temperatura: {sem_temperatura:>5}')
 
 
 if __name__ == '__main__':
