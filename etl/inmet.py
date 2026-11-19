@@ -4,6 +4,12 @@ import pandas as pd
 ENCODING = 'latin-1'
 METADATA_LINES = 8  # linhas de cabeçalho antes da tabela (região, UF, estação, código...)
 
+# Colunas do INMET carregadas no banco → código da variável em dim_variavel
+VARIABLES = {
+    'PRECIPITAÇÃO TOTAL, HORÁRIO (mm)': 'precipitacao',
+    'TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)': 'temperatura_ar',
+}
+
 
 def read_station_code(path):
     """Lê o código da estação (ex.: 'A612') nas linhas de cabeçalho do arquivo."""
@@ -28,3 +34,21 @@ def read_inmet(path):
         df['Data'] + ' ' + df['Hora UTC'], format='%Y/%m/%d %H%M UTC', utc=True
     )
     return df
+
+def to_long(df):
+    """Converte do formato largo (uma coluna por variável) para o longo (uma linha por hora e variável).
+
+    Mantém só as variáveis de VARIABLES, já com o código usado em dim_variavel.
+    Horas sem dado ficam com valor NaN, que será gravado como NULL no banco.
+    """
+    missing = [column for column in VARIABLES if column not in df.columns]
+    if missing:
+        raise ValueError(f'Colunas esperadas não encontradas no arquivo: {missing}')
+    long = df.melt(
+        id_vars='data_hora_utc',
+        value_vars=list(VARIABLES),
+        var_name='variavel',
+        value_name='valor',
+    )
+    long['variavel'] = long['variavel'].map(VARIABLES)
+    return long
