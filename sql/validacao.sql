@@ -90,3 +90,39 @@ FROM mensal
 WHERE completude >= 0.75
 GROUP BY 1
 ORDER BY 1;
+
+
+-- 5. Efeito do fuso: total mensal de chuva agrupado em UTC (como o notebook) e no horário de Vitória
+--    Mostra só os meses em que os dois totais diferem.
+WITH utc AS (
+    SELECT to_char(m.data_hora_utc AT TIME ZONE 'UTC', 'YYYY-MM') AS mes,
+           sum(m.valor) AS total_mm
+    FROM f_medicao AS m
+    JOIN dim_estacao AS e USING (id_estacao)
+    JOIN dim_variavel AS v USING (id_variavel)
+    WHERE e.codigo = 'A612'
+      AND v.codigo = 'precipitacao'
+      AND m.data_hora_utc >= '2021-01-01 00:00+00'
+      AND m.data_hora_utc <  '2026-01-01 00:00+00'
+    GROUP BY mes
+),
+local AS (
+    SELECT to_char(m.data_hora_utc AT TIME ZONE 'America/Sao_Paulo', 'YYYY-MM') AS mes,
+           sum(m.valor) AS total_mm
+    FROM f_medicao AS m
+    JOIN dim_estacao AS e USING (id_estacao)
+    JOIN dim_variavel AS v USING (id_variavel)
+    WHERE e.codigo = 'A612'
+      AND v.codigo = 'precipitacao'
+      AND m.data_hora_utc >= '2021-01-01 00:00 America/Sao_Paulo'
+      AND m.data_hora_utc <  '2026-01-01 00:00 America/Sao_Paulo'
+    GROUP BY mes
+)
+SELECT mes,
+       u.total_mm AS total_utc,
+       l.total_mm AS total_local,
+       l.total_mm - u.total_mm AS diferenca
+FROM utc AS u
+JOIN local AS l USING (mes)
+WHERE l.total_mm <> u.total_mm
+ORDER BY abs(l.total_mm - u.total_mm) DESC;
