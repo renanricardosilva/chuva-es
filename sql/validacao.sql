@@ -43,3 +43,50 @@ SELECT CASE
 FROM mensal
 GROUP BY classe
 ORDER BY classe;
+
+
+-- 3. Total anual de chuva, somando só os meses válidos (ranking anual do notebook)
+WITH mensal AS (
+    SELECT date_trunc('month', m.data_hora_utc AT TIME ZONE 'UTC') AS mes,
+           sum(m.valor) AS total_mm,
+           count(m.valor)::numeric / count(*) AS completude
+    FROM f_medicao AS m
+    JOIN dim_estacao AS e USING (id_estacao)
+    JOIN dim_variavel AS v USING (id_variavel)
+    WHERE e.codigo = 'A612'
+      AND v.codigo = 'precipitacao'
+      AND m.data_hora_utc >= '2021-01-01 00:00+00'
+      AND m.data_hora_utc <  '2026-01-01 00:00+00'
+    GROUP BY mes
+)
+SELECT extract(year FROM mes)::int AS ano,
+       round(sum(total_mm), 1) AS total_mm,
+       count(*) AS meses_validos
+FROM mensal
+WHERE completude >= 0.75
+GROUP BY ano
+ORDER BY total_mm DESC;
+
+-- 4. Média, mínimo e máximo do total mensal de chuva, por mês do calendário (só meses válidos)
+WITH mensal AS (
+    SELECT date_trunc('month', m.data_hora_utc AT TIME ZONE 'UTC') AS mes,
+           sum(m.valor) AS total_mm,
+           count(m.valor)::numeric / count(*) AS completude
+    FROM f_medicao AS m
+    JOIN dim_estacao AS e USING (id_estacao)
+    JOIN dim_variavel AS v USING (id_variavel)
+    WHERE e.codigo = 'A612'
+      AND v.codigo = 'precipitacao'
+      AND m.data_hora_utc >= '2021-01-01 00:00+00'
+      AND m.data_hora_utc <  '2026-01-01 00:00+00'
+    GROUP BY mes
+)
+SELECT extract(month FROM mes)::int AS mes,
+       round(avg(total_mm), 1) AS media_mm,
+       round(min(total_mm), 1) AS min_mm,
+       round(max(total_mm), 1) AS max_mm,
+       count(*) AS n_anos
+FROM mensal
+WHERE completude >= 0.75
+GROUP BY 1
+ORDER BY 1;
