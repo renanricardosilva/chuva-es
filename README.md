@@ -56,17 +56,58 @@ O painel compara o ano atual (ou um ano escolhido) com a série histórica, por 
 - **Mapas no QGIS** do estado e distribuição da chuva
 - **Painel no Power BI** com análises regionalizadas
 
+## Banco de dados
+
+Banco PostgreSQL/PostGIS (`ambiental_es`) num modelo dimensional (esquema estrela): uma tabela de fatos com as medições, cercada de tabelas de dimensões que dão contexto a elas.
+
+| Tabela | O que guarda |
+|---|---|
+| `f_medicao` | medições horárias de cada estação e variável, com horário em UTC; dado ausente é gravado como NULL, nunca como zero |
+| `dim_estacao` | 13 estações automáticas do INMET no ES (11 em operação e 2 históricas), com localização e município |
+| `dim_variavel` | variáveis medidas: precipitação e temperatura do ar |
+| `dim_municipio` | 78 municípios do ES, com os limites (IBGE) |
+| `dim_microrregiao` e `dim_macrorregiao` | regionalização oficial do ES (Lei Estadual 9.768/2011) |
+| `dim_fonte` | instituições que fornecem os dados |
+
+Conteúdo atual: medições de chuva e temperatura de **2019 a 31/10/2026** (cerca de 1,7 milhão de linhas).
+
+- **Modelo e decisões:** [ADR 0003](docs/decisoes/0003-modelo-de-dados.md) e [diagrama do modelo](docs/modelo-dados.md)
+- **Validação:** o banco reproduz o notebook de exploração ([resultados](docs/validacao-a612.md))
+
+### Como recriar do zero
+
+Pré-requisitos:
+
+- PostgreSQL com PostGIS, ambiente Python e arquivo `.env` configurados, conforme [docs/ambiente.md](docs/ambiente.md);
+- dados brutos em `data/raw/` (não versionados): catálogo de estações do INMET, malha municipal do IBGE e CSVs anuais do INMET. As fontes estão em [data/reference/README.md](data/reference/README.md) e em [docs/levantamento-canais-inmet.md](docs/levantamento-canais-inmet.md).
+
+Na raiz do projeto, com o ambiente virtual ativo (no Windows, use o caminho completo do `psql.exe`):
+
+```
+psql -U postgres -d postgres -c "CREATE DATABASE ambiental_es;"
+psql -U postgres -d ambiental_es -c "CREATE EXTENSION postgis;"
+psql -U postgres -d ambiental_es -f sql/01_criar_tabelas.sql
+python -m etl.load_stations
+psql -U postgres -d ambiental_es -f sql/02_variaveis.sql
+psql -U postgres -d ambiental_es -f sql/03_estacoes_fora_do_catalogo.sql
+python -m etl.load_municipalities
+python -m etl.load_measurements
+```
+
+**A ordem importa:** o `load_stations` cadastra a fonte INMET, de que o `03_estacoes_fora_do_catalogo.sql` precisa; o `load_municipalities` liga ao seu município todas as estações já cadastradas; e o `load_measurements` precisa das estações e das variáveis. Todos os passos são idempotentes: podem ser executados de novo sem duplicar dados. A carga das medições leva cerca de 2 minutos. A receita foi testada em 21/11/2026, num banco descartável criado do zero, e produziu o mesmo conteúdo do banco principal.
+
 ## Fonte dos dados
 
 - [INMET — dados históricos das estações automáticas](https://portal.inmet.gov.br/dadoshistoricos)
-- Bases oficiais do Governo do Espírito Santo (regionalização, limites municipais ou outras informações que se mostrarem pertinentes)
+- [IBGE — Malha Municipal 2025](https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/15774-malhas.html) (limites dos municípios)
+- Lei Estadual nº 9.768/2011, com a redação da Lei nº 11.174/2020 (microrregiões e macrorregiões de planejamento do ES)
 
 ## Roteiro
 
 - [x] Etapa 0 — Fundação: repositório, documentação e sonda do INMET
 - [x] Etapa 1 — Entendimento dos dados (estação Vitória - A612)
-- [ ] Etapa 2 — Extração e transformação (ETL)
-- [ ] Etapa 3 — Modelagem e banco de dados
+- [x] Etapa 2 — Extração e transformação (ETL) *— dados de 2019 a out/2026 carregados; a série de 2006 a 2018, em formato antigo, será incluída na #29*
+- [x] Etapa 3 — Modelagem e banco de dados
 - [ ] Etapa 4 — Robô diário de verificação e atualização
 - [ ] Etapa 5 — Mapas no QGIS
 - [ ] Etapa 6 — Do QGIS ao código (PostGIS)
@@ -75,7 +116,10 @@ O painel compara o ano atual (ou um ano escolhido) com a série histórica, por 
 
 ## Status
 
-🚧 Em construção — Etapa 1 concluída para a estação de Vitória (A612).
+🚧 Em construção — Etapas 2 e 3 concluídas: os dados do INMET estão num banco PostgreSQL/PostGIS, ligados aos municípios e às regiões do ES.
 
-- **Destaque:** [exploração dos dados de Vitória, 2021–2025](notebooks/01-exploracao-vitoria.ipynb): leitura dos arquivos do INMET, análise de completude, investigação das falhas da estação e primeiras análises da chuva.
-- **Próximo passo:** carga dos dados num banco PostgreSQL.
+- **Destaques:**
+  - [Banco de dados](#banco-de-dados): 13 estações, 78 municípios e cerca de 1,7 milhão de medições horárias de chuva e temperatura (2019 a out/2026);
+  - [validação do banco](docs/validacao-a612.md): o banco reproduz o notebook de exploração;
+  - [exploração dos dados de Vitória, 2021–2025](notebooks/01-exploracao-vitoria.ipynb): leitura dos arquivos do INMET, análise de completude, investigação das falhas da estação e primeiras análises da chuva.
+- **Próximos passos:** carregar a série histórica de 2006 a 2018 e criar *views* SQL para o consumo dos dados pelo Power BI.

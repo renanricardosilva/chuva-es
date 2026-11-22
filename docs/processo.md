@@ -43,8 +43,8 @@ Decisões de arquitetura e de método são registradas como ADRs em `docs/deciso
 
 ## Histórico de velocidade
 
-| Sprint | Período         | Planejado         | Entregue                    |
-|--------|-----------------|-------------------|-----------------------------|
-| 1      | 08 a 10/11/2026 | –-----------------| – (antes do planning poker) |
-| 2      | 11 a 14/11/2026 | –---------------- | ≈ 26 (estimado depois) ---- |
-| 3      | 15 a 21/11/2026 | 36 + 13 (desafio) | --------------------------- |
+| Sprint | Período         | Planejado         | Entregue                                         |
+|--------|-----------------|-------------------|--------------------------------------------------|
+| 1      | 08 a 10/11/2026 | –                 | – (antes do planning poker)                      |
+| 2      | 11 a 14/11/2026 | –                 | ≈ 26 (estimado depois)                           |
+| 3      | 15 a 21/11/2026 | 36 + 13 (desafio) | 36 (todo o compromisso; desafio não iniciado)    |
