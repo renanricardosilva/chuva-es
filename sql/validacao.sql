@@ -91,7 +91,6 @@ WHERE completude >= 0.75
 GROUP BY 1
 ORDER BY 1;
 
-
 -- 5. Efeito do fuso: total mensal de chuva agrupado em UTC (como o notebook) e no horário de Vitória
 --    Mostra só os meses em que os dois totais diferem.
 WITH utc AS (
@@ -126,3 +125,15 @@ FROM utc AS u
 JOIN local AS l USING (mes)
 WHERE l.total_mm <> u.total_mm
 ORDER BY abs(l.total_mm - u.total_mm) DESC;
+
+-- 6. Conferência da carga histórica (#29): nenhuma medição anterior ao início de operação da estação
+SELECT e.codigo,
+       e.data_inicio_operacao AS inicio_cadastro,
+       min(m.data_hora_utc) AT TIME ZONE 'UTC' AS primeira_medicao_utc,
+       count(*) FILTER (
+           WHERE m.data_hora_utc < e.data_inicio_operacao::timestamp AT TIME ZONE 'UTC'
+       ) AS medicoes_antes_do_inicio
+FROM f_medicao AS m
+JOIN dim_estacao AS e USING (id_estacao)
+GROUP BY e.codigo, e.data_inicio_operacao
+ORDER BY e.codigo;
