@@ -5,7 +5,7 @@ import pandas as pd
 import time
 from sqlalchemy import text
 from etl.db import get_engine
-from etl.inmet import is_current_format, read_inmet, read_station_code, to_long
+from etl.inmet import read_inmet, read_station_code, to_long
 
 SELECT_STATION = text("""
     SELECT e.id_estacao
@@ -62,8 +62,6 @@ def load_file(conn, path, variable_ids):
 def main():
     """Carrega os arquivos indicados na linha de comando ou, se nenhum for indicado, todos de data/raw/inmet."""
     paths = [Path(arg) for arg in sys.argv[1:]] or sorted(INMET_DIR.glob('*.CSV'))
-    supported = [path for path in paths if is_current_format(path)]
-    skipped = len(paths) - len(supported)
 
     engine = get_engine()
     start = time.perf_counter()
@@ -71,14 +69,14 @@ def main():
         variable_ids = dict(conn.execute(SELECT_VARIABLES).all())
 
     total = 0
-    for i, path in enumerate(supported, start=1):
+    for i, path in enumerate(paths, start=1):
         with engine.begin() as conn:  # uma transação por arquivo
             count = load_file(conn, path, variable_ids)
         total += count
-        print(f'[{i}/{len(supported)}] {path.name}: {count} linhas')
+        print(f'[{i}/{len(paths)}] {path.name}: {count} linhas')
 
     elapsed = time.perf_counter() - start
-    print(f'\nArquivos carregados: {len(supported)} | ignorados (formato anterior a 2019, ver #29): {skipped}')
+    print(f'\nArquivos carregados: {len(paths)}')
     print(f'Linhas gravadas nesta execução: {total} | tempo: {elapsed:.0f} s\n')
 
     with engine.connect() as conn:

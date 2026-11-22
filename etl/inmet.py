@@ -3,11 +3,18 @@ import pandas as pd
 
 ENCODING = 'latin-1'
 METADATA_LINES = 8  # linhas de cabeçalho antes da tabela (região, UF, estação, código...)
+MISSING_VALUE = -9999  # código de dado ausente nos arquivos até 2018
 
 # Colunas do INMET carregadas no banco → código da variável em dim_variavel
 VARIABLES = {
     'PRECIPITAÇÃO TOTAL, HORÁRIO (mm)': 'precipitacao',
     'TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)': 'temperatura_ar',
+}
+
+# Formatos dos CSVs do INMET: colunas de data e hora e o padrão para lê-las
+FORMATS = {
+    'atual (2019+)': {'date': 'Data', 'time': 'Hora UTC', 'pattern': '%Y/%m/%d %H%M UTC'},
+    'antigo (até 2018)': {'date': 'DATA (YYYY-MM-DD)', 'time': 'HORA (UTC)', 'pattern': '%Y-%m-%d %H:%M'},
 }
 
 
@@ -20,26 +27,32 @@ def read_station_code(path):
                 return value.strip()
     raise ValueError(f'Código da estação não encontrado no cabeçalho de {path}')
 
-def is_current_format(path):
-    """Indica se o arquivo usa o formato adotado pelo INMET a partir de 2019."""
-    with open(path, encoding=ENCODING) as file:
-        for _ in range(METADATA_LINES):
-            file.readline()
-        return file.readline().startswith('Data;Hora UTC')
-    
-def read_inmet(path):
-    """Lê os dados horários de um CSV do INMET no formato usado a partir de 2019.
 
-    Acrescenta a coluna 'data_hora_utc' (timestamp com fuso UTC), juntando 'Data' e 'Hora UTC'.
+def detect_format(df, path):
+    """Identifica o formato do arquivo pelas colunas de data e hora; devolve a chave de FORMATS."""
+    for name, fmt in FORMATS.items():
+        if fmt['date'] in df.columns and fmt['time'] in df.columns:
+            return name
+    raise ValueError(f'Formato de arquivo do INMET não reconhecido: {path}')
+
+
+def read_inmet(path):
+    """Lê os dados horários de um CSV do INMET, em qualquer um dos formatos de FORMATS.
+
+    Acrescenta a coluna 'data_hora_utc' (timestamp com fuso UTC), juntando data e hora.
+    O código de ausência (-9999) é lido como NaN, que será gravado como NULL no banco.
     """
-    df = pd.read_csv(path, encoding=ENCODING, skiprows=METADATA_LINES, decimal=',', sep=';')
-    if 'Hora UTC' not in df.columns:
-        raise ValueError(f'Formato anterior a 2019 ainda não suportado (ver issue #29): {path}')
+    df = pd.read_csv(
+        path, encoding=ENCODING, skiprows=METADATA_LINES, decimal=',', sep=';',
+        na_values=[MISSING_VALUE],
+    )
+    fmt = FORMATS[detect_format(df, path)]
     df = df.drop(columns=[c for c in df.columns if c.startswith('Unnamed')])
     df['data_hora_utc'] = pd.to_datetime(
-        df['Data'] + ' ' + df['Hora UTC'], format='%Y/%m/%d %H%M UTC', utc=True
+        df[fmt['date']] + ' ' + df[fmt['time']], format=fmt['pattern'], utc=True
     )
     return df
+
 
 def to_long(df):
     """Converte do formato largo (uma coluna por variável) para o longo (uma linha por hora e variável).
