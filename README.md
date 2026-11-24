@@ -92,6 +92,7 @@ psql -U postgres -d ambiental_es -f sql/02_variaveis.sql
 psql -U postgres -d ambiental_es -f sql/03_estacoes_fora_do_catalogo.sql
 python -m etl.load_municipalities
 python -m etl.load_measurements
+psql -U postgres -d ambiental_es -f sql/04_views.sql
 ```
 
 **A ordem importa:** o `load_stations` cadastra a fonte INMET, de que o `03_estacoes_fora_do_catalogo.sql` precisa; o `load_municipalities` liga ao seu município todas as estações já cadastradas; e o `load_measurements` precisa das estações e das variáveis. Todos os passos são idempotentes: podem ser executados de novo sem duplicar dados. A carga das medições leva cerca de 2 minutos. A receita foi testada em 21/11/2026, num banco descartável criado do zero, e produziu o mesmo conteúdo do banco principal.
