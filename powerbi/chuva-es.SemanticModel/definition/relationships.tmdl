@@ -1,0 +1,8 @@
+relationship AutoDetected_f0068f3f-0cff-4684-aa65-27496897d635
+	fromColumn: 'Chuva mensal (estação)'.id_estacao
+	toColumn: Estações.id_estacao
+
+relationship 0e5aced4-757b-700e-61ec-a8ab649360d6
+	fromColumn: 'Climatologia regional'.mes_do_ano
+	toColumn: Meses.mes_do_ano
+

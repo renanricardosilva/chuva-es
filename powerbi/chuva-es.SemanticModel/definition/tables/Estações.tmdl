@@ -1,0 +1,78 @@
+table Estações
+	lineageTag: bd144f54-84f5-4c12-8668-a9baf5d40822
+
+	column codigo
+		dataType: string
+		lineageTag: 92264589-6686-4dfe-b774-ab515bba4870
+		summarizeBy: none
+		sourceColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: dad1cb63-dd6e-403b-b6dd-8e2498db3b28
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_municipio
+		dataType: int64
+		formatString: 0
+		lineageTag: b66ad02f-ace4-41ab-af1a-94d9d92686ec
+		summarizeBy: none
+		sourceColumn: id_municipio
+
+		annotation SummarizationSetBy = User
+
+	column situacao
+		dataType: string
+		lineageTag: 93a40b6d-f624-4656-ba06-c69dfbd89606
+		summarizeBy: none
+		sourceColumn: situacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column altitude_m
+		dataType: double
+		lineageTag: 4f560614-abe0-44e5-bb77-5e2fefac916f
+		summarizeBy: none
+		sourceColumn: altitude_m
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data_inicio_operacao
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 17ca1829-d7ce-439b-a0d1-a6065d2806ed
+		summarizeBy: none
+		sourceColumn: data_inicio_operacao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column id_estacao
+		dataType: int64
+		formatString: 0
+		lineageTag: 5096de71-d029-4ba7-8d77-1b54b101c32d
+		summarizeBy: none
+		sourceColumn: id_estacao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Estações = m
+		mode: import
+		source =
+				let
+				  Origem = PostgreSQL.Database("localhost", "ambiental_es"),
+				  #"Navegação 1" = Origem{[Schema = "public", Item = "dim_estacao"]}[Data],
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Navegação 1", {"id_fonte", "geom", "public.dim_fonte", "public.dim_municipio", "public.f_medicao"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+
