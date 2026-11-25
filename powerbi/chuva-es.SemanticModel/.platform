@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "chuva-es"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c9bb1c14-329e-4878-8fbd-bbf73cd06fd5"
+  }
+}

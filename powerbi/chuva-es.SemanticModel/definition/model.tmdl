@@ -1,0 +1,22 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Estações","Chuva mensal (estação)","Climatologia regional"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Estações
+ref table 'Chuva mensal (estação)'
+ref table 'Climatologia regional'
+ref table Meses
+
+ref cultureInfo pt-BR
+

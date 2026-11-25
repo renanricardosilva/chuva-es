@@ -1,0 +1,76 @@
+table 'Climatologia regional'
+	lineageTag: 488bf951-8a2c-4363-b538-6dd71ca0afc2
+
+	column nivel
+		dataType: string
+		lineageTag: 0758a454-3785-4048-931f-6be49ad84e2b
+		summarizeBy: none
+		sourceColumn: nivel
+
+		annotation SummarizationSetBy = Automatic
+
+	column regiao
+		dataType: string
+		lineageTag: 28cbf709-33c5-40e7-baad-720d04b8fd88
+		summarizeBy: none
+		sourceColumn: regiao
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_do_ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e83a7a9-adba-4bf3-b3f6-dc6103173c18
+		summarizeBy: none
+		sourceColumn: mes_do_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column chuva_media_mm
+		dataType: double
+		lineageTag: a918fd39-ad4a-4a8a-9038-4de3f8274c4e
+		summarizeBy: sum
+		sourceColumn: chuva_media_mm
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column n_estacoes
+		dataType: int64
+		formatString: 0
+		lineageTag: 4079fdeb-d6f0-4f09-81e2-f515de5dabbc
+		summarizeBy: none
+		sourceColumn: n_estacoes
+
+		annotation SummarizationSetBy = User
+
+	column n_anos_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 529cff35-4ea9-47b1-b0c8-21135c75ea3e
+		summarizeBy: none
+		sourceColumn: n_anos_min
+
+		annotation SummarizationSetBy = User
+
+	column n_anos_max
+		dataType: int64
+		formatString: 0
+		lineageTag: aed642a0-e69f-4b30-9aa1-f2e551fa5f15
+		summarizeBy: none
+		sourceColumn: n_anos_max
+
+		annotation SummarizationSetBy = User
+
+	partition 'Climatologia regional' = m
+		mode: import
+		source =
+				let
+				  Origem = PostgreSQL.Database("localhost", "ambiental_es"),
+				  #"Navegação 1" = Origem{[Schema = "public", Item = "vw_climatologia_mensal_regiao"]}[Data]
+				in
+				  #"Navegação 1"
+
+	annotation PBI_ResultType = Table
+

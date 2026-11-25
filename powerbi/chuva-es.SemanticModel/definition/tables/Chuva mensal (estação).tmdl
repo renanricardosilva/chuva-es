@@ -1,0 +1,80 @@
+table 'Chuva mensal (estação)'
+	lineageTag: 121b02de-b2e6-4394-9b39-218f63d178aa
+
+	column id_estacao
+		dataType: int64
+		formatString: 0
+		lineageTag: a422cdc0-2e05-4544-bc17-53725204c3ff
+		summarizeBy: none
+		sourceColumn: id_estacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 20ac2a8d-1f88-4d4e-86d9-7a50a659792e
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column total_mm
+		dataType: double
+		lineageTag: f0e88552-d727-458c-8c4c-657a09b49823
+		summarizeBy: sum
+		sourceColumn: total_mm
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column horas_com_registro
+		dataType: int64
+		formatString: 0
+		lineageTag: d8dd9b0f-549a-46d6-86c0-1e0b45eec0b1
+		summarizeBy: sum
+		sourceColumn: horas_com_registro
+
+		annotation SummarizationSetBy = User
+
+	column horas_do_mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c0767ba-c494-494b-8a65-3e8fbd640895
+		summarizeBy: sum
+		sourceColumn: horas_do_mes
+
+		annotation SummarizationSetBy = User
+
+	column completude
+		dataType: double
+		lineageTag: 0c8ea124-8507-44f9-b3c3-6c683358b09a
+		summarizeBy: none
+		sourceColumn: completude
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column classe
+		dataType: string
+		lineageTag: 5a8203b9-045d-4cae-aca9-1f2734972983
+		summarizeBy: none
+		sourceColumn: classe
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Chuva mensal (estação)' = m
+		mode: import
+		source =
+				let
+				  Origem = PostgreSQL.Database("localhost", "ambiental_es"),
+				  #"Navegação 1" = Origem{[Schema = "public", Item = "vw_chuva_mensal_estacao"]}[Data]
+				in
+				  #"Navegação 1"
+
+	annotation PBI_ResultType = Table
+

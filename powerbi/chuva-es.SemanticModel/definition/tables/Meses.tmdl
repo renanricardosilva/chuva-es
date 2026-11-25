@@ -1,0 +1,65 @@
+table Meses
+	lineageTag: 3a5735f1-b852-4c0d-af05-893c63855a0d
+
+	column mes_do_ano
+		formatString: 0
+		lineageTag: 63a74de8-1cbd-4f50-ade6-e0412ff0ba5a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [mes_do_ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_nome
+		lineageTag: 16439d48-6103-4ded-9b50-6f87c38a5a9a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [mes_nome]
+		sortByColumn: mes_do_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_abrev
+		lineageTag: 443bf797-45d4-45e7-9ff9-7629dbbf2063
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [mes_abrev]
+		sortByColumn: mes_do_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column estacao_do_ano
+		lineageTag: eb8aae7b-08b4-4bb0-a526-13c1588d185f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [estacao_do_ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Meses = calculated
+		mode: import
+		source =
+				
+				DATATABLE (
+				    "mes_do_ano", INTEGER,
+				    "mes_nome", STRING,
+				    "mes_abrev", STRING,
+				    "estacao_do_ano", STRING,
+				    {
+				        { 1, "Janeiro", "Jan", "Verão" },
+				        { 2, "Fevereiro", "Fev", "Verão" },
+				        { 3, "Março", "Mar", "Outono" },
+				        { 4, "Abril", "Abr", "Outono" },
+				        { 5, "Maio", "Mai", "Outono" },
+				        { 6, "Junho", "Jun", "Inverno" },
+				        { 7, "Julho", "Jul", "Inverno" },
+				        { 8, "Agosto", "Ago", "Inverno" },
+				        { 9, "Setembro", "Set", "Primavera" },
+				        { 10, "Outubro", "Out", "Primavera" },
+				        { 11, "Novembro", "Nov", "Primavera" },
+				        { 12, "Dezembro", "Dez", "Verão" }
+				    }
+				)
+
+	annotation PBI_Id = 191b6331556c4f20b46effadbfec242d
+
