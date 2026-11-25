@@ -221,3 +221,10 @@ __marimo__/
 
 # Dados brutos do INMET: baixados do portal, não versionados
 data/raw/
+
+# Power BI Project: cópia local dos dados e configurações da máquina (não versionar)
+powerbi/**/.pbi/cache.abf
+powerbi/**/.pbi/localSettings.json
+
+# Rascunhos de consultas SQL
+sql/rascunho.sql
