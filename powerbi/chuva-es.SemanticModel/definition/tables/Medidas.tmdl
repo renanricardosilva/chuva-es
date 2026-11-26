@@ -1,0 +1,101 @@
+table Medidas
+	lineageTag: 3dd4047e-9095-4383-8a4e-697fe412316a
+
+	measure 'Chuva média mensal (mm)' =
+			
+			IF (
+			    HASONEVALUE ( 'Climatologia regional'[nivel] )
+			        && HASONEVALUE ( 'Climatologia regional'[regiao] ),
+			    SUM ( 'Climatologia regional'[chuva_media_mm] )
+			)
+		lineageTag: 0ec41716-d8df-4cb1-a46a-b26bf1402918
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Chuva média anual (mm)' =
+			
+			CALCULATE ( [Chuva média mensal (mm)], REMOVEFILTERS ( Meses ) )
+		lineageTag: 8ffc67a4-1441-45af-965d-7bb85de902b3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Posição do mês' =
+			
+			IF (
+			    NOT ISBLANK ( [Chuva média mensal (mm)] ),
+			    RANKX ( ALL ( Meses ), [Chuva média mensal (mm)], , DESC, DENSE )
+			)
+		formatString: 0
+		lineageTag: 5dcb2793-ec26-4042-b261-d2e8898b6c38
+
+	measure 'Cor da coluna' =
+			
+			VAR posicao = [Posição do mês]
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        posicao <= 3, "#4FA3F7",
+			        posicao >= 10, "#E0A23A",
+			        "#5F7A96"
+			    )
+		lineageTag: 90c789cc-63e2-4bc4-85a1-1ca748c13509
+
+	measure 'Mês mais chuvoso' =
+			
+			VAR tabela = ADDCOLUMNS ( ALL ( Meses ), "@chuva", [Chuva média mensal (mm)] )
+			RETURN MAXX ( TOPN ( 1, tabela, [@chuva], DESC ), Meses[mes_nome] )
+		lineageTag: 0b8d61df-24cd-4fb2-a455-cf64f9921ca6
+
+	measure 'Mês mais seco' =
+			
+			VAR tabela = ADDCOLUMNS ( ALL ( Meses ), "@chuva", [Chuva média mensal (mm)] )
+			RETURN MAXX ( TOPN ( 1, tabela, [@chuva], ASC ), Meses[mes_nome] )
+		lineageTag: 3530e9ee-20d3-4665-8b28-c586f441010c
+
+	measure 'Estações usadas' =
+			
+			VAR minimo = MIN ( 'Climatologia regional'[n_estacoes] )
+			VAR maximo = MAX ( 'Climatologia regional'[n_estacoes] )
+			RETURN IF ( minimo = maximo, FORMAT ( minimo, "0" ), minimo & " a " & maximo )
+		lineageTag: 58de327a-5a9f-499a-9b1e-f7a3737fafd9
+
+	measure 'Anos por estação' =
+			
+			MIN ( 'Climatologia regional'[n_anos_min] ) & " a " & MAX ( 'Climatologia regional'[n_anos_max] )
+		lineageTag: 56a15add-09bc-4f6d-bba5-6458c433e9f0
+
+	measure 'Período dos dados' =
+			
+			MIN ( 'Climatologia regional'[ano_inicio] ) & "–" & MAX ( 'Climatologia regional'[ano_fim] )
+		lineageTag: e9249993-e0cf-4e33-aa67-60e4ad383abf
+
+	measure 'Concentração nos 3 meses mais chuvosos' =
+			
+			VAR tabela = ADDCOLUMNS ( ALL ( Meses ), "@chuva", [Chuva média mensal (mm)] )
+			VAR top3 = SUMX ( TOPN ( 3, tabela, [@chuva], DESC ), [@chuva] )
+			RETURN DIVIDE ( top3, [Chuva média anual (mm)] )
+		formatString: 0%;-0%;0%
+		lineageTag: 3b05f18d-b635-4756-84e4-0b7560a130e0
+
+	measure 'Participação no ano' =
+			
+			DIVIDE ( [Chuva média mensal (mm)], [Chuva média anual (mm)] )
+		formatString: 0%;-0%;0%
+		lineageTag: 878a315a-45b9-49fd-b3a0-3a7e158f07f0
+
+	column apagar
+		isHidden
+		formatString: 0
+		lineageTag: 77595481-4656-4db3-94a5-b708a3a7019c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [apagar]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = ROW ( "apagar", BLANK () )
+
+	annotation PBI_Id = 64f10df0e71d46238b3a34dd9833f7d6
+

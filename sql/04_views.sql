@@ -71,14 +71,16 @@ SELECT 'macrorregião' AS nivel, macrorregiao AS regiao, mes_do_ano,
        avg(chuva_media_mm) AS chuva_media_mm,
        count(*)    AS n_estacoes,
        min(n_anos) AS n_anos_min,
-       max(n_anos) AS n_anos_max
+       max(n_anos) AS n_anos_max,
+       min(ano_inicio) AS ano_inicio,
+       max(ano_fim)    AS ano_fim
 FROM estacao_regiao
 GROUP BY macrorregiao, mes_do_ano
 UNION ALL
 SELECT 'microrregião', microrregiao, mes_do_ano,
-       avg(chuva_media_mm), count(*), min(n_anos), max(n_anos)
+       avg(chuva_media_mm), count(*), min(n_anos), max(n_anos), min(ano_inicio), max(ano_fim)
 FROM estacao_regiao
 GROUP BY microrregiao, mes_do_ano;
 
 COMMENT ON VIEW vw_climatologia_mensal_regiao IS
-    'Chuva média de cada mês do ano por macro e microrregião: média simples das climatologias das estações da região (ADR 0004), com o número de estações e o mínimo e o máximo de anos usados.';
+    'Chuva média de cada mês do ano por macro e microrregião: média simples das climatologias das estações da região (ADR 0004), com o número de estações, o mínimo e o máximo de anos usados e o primeiro e o último ano com dados das estações da região.';
