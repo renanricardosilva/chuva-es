@@ -28,8 +28,8 @@ O painel compara o ano atual (ou um ano escolhido) com a série histórica, por 
 **2. Período chuvoso e seco**
 > **Como** morador ou turista, **quero** ver em quais meses mais chove na região, **para** planejar atividades no período mais adequado (plantio, obras, viagens).
 
-- [ ] Vejo a chuva média de cada mês do ano, para a região escolhida
-- [ ] Os meses mais secos e mais chuvosos aparecem destacados
+- [x] Vejo a chuva média de cada mês do ano, para a região escolhida
+- [x] Os meses mais secos e mais chuvosos aparecem destacados
 
 **3. Informação para a imprensa**
 > **Como** jornalista, **quero** saber se a chuva deste ano está acima ou abaixo do normal na região, **para** informar a população com dados oficiais quando houver estiagem ou excesso de chuva.

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "fdbf0174b4a1138d166f",
+  "position": {
+    "x": 278.81739130434784,
+    "y": 0,
+    "z": 12,
+    "height": 230,
+    "width": 230
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Anos por estação"
+                }
+              },
+              "queryRef": "Medidas.Anos por estação",
+              "nativeQueryRef": "Anos por estação"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

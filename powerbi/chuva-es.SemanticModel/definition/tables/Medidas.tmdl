@@ -69,6 +69,20 @@ table Medidas
 			MIN ( 'Climatologia regional'[ano_inicio] ) & "–" & MAX ( 'Climatologia regional'[ano_fim] )
 		lineageTag: e9249993-e0cf-4e33-aa67-60e4ad383abf
 
+	measure 'Concentração nos 3 meses mais chuvosos' =
+			
+			VAR tabela = ADDCOLUMNS ( ALL ( Meses ), "@chuva", [Chuva média mensal (mm)] )
+			VAR top3 = SUMX ( TOPN ( 3, tabela, [@chuva], DESC ), [@chuva] )
+			RETURN DIVIDE ( top3, [Chuva média anual (mm)] )
+		formatString: 0%;-0%;0%
+		lineageTag: 3b05f18d-b635-4756-84e4-0b7560a130e0
+
+	measure 'Participação no ano' =
+			
+			DIVIDE ( [Chuva média mensal (mm)], [Chuva média anual (mm)] )
+		formatString: 0%;-0%;0%
+		lineageTag: 878a315a-45b9-49fd-b3a0-3a7e158f07f0
+
 	column apagar
 		isHidden
 		formatString: 0

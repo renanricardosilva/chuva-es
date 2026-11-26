@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "0649a4e6e7c1046eb2eb",
+  "position": {
+    "x": 509.21739130434781,
+    "y": 0,
+    "z": 10,
+    "height": 230,
+    "width": 230
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Concentração nos 3 meses mais chuvosos"
+                }
+              },
+              "queryRef": "Medidas.Concentração nos 3 meses mais chuvosos",
+              "nativeQueryRef": "Concentração nos 3 meses mais chuvosos"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
