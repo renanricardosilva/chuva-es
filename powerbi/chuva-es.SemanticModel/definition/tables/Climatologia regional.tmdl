@@ -63,6 +63,24 @@ table 'Climatologia regional'
 
 		annotation SummarizationSetBy = User
 
+	column ano_inicio
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d88b7b0-de06-4204-bfc5-67f523c20be4
+		summarizeBy: sum
+		sourceColumn: ano_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_fim
+		dataType: int64
+		formatString: 0
+		lineageTag: d4e80efa-6fe0-45af-a42f-1dca5007d617
+		summarizeBy: sum
+		sourceColumn: ano_fim
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Climatologia regional' = m
 		mode: import
 		source =

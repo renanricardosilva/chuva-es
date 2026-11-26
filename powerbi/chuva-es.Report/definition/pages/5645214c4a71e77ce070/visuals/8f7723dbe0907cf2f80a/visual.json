@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "8f7723dbe0907cf2f80a",
+  "position": {
+    "x": 736.19631901840489,
+    "y": 0,
+    "z": 5,
+    "height": 280,
+    "width": 280
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Mês mais seco"
+                }
+              },
+              "queryRef": "Medidas.Mês mais seco",
+              "nativeQueryRef": "Mês mais seco"
+            }
+          ]
+        }
+      }
+    },
+    "autoSelectVisualType": true,
+    "drillFilterOtherVisuals": true
+  }
+}

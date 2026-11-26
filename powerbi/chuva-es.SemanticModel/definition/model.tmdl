@@ -17,6 +17,7 @@ ref table Estações
 ref table 'Chuva mensal (estação)'
 ref table 'Climatologia regional'
 ref table Meses
+ref table Medidas
 
 ref cultureInfo pt-BR
 
