@@ -1,2 +1,2539 @@
 cultureInfo pt-BR
 
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "estaçõe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Estações"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estaçõe": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "estaçõe.codigo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Estações",
+			          "ConceptualProperty": "codigo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "codigo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "estaçõe.nome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Estações",
+			          "ConceptualProperty": "nome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "estaçõe.id_municipio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Estações",
+			          "ConceptualProperty": "id_municipio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id municipio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_municipio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification municipio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity municipio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier municipio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential municipio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "estaçõe.situacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Estações",
+			          "ConceptualProperty": "situacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "situacao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "estaçõe.altitude_m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Estações",
+			          "ConceptualProperty": "altitude_m"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "altitude m": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "altitude_m": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "m": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "estaçõe.data_inicio_operacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Estações",
+			          "ConceptualProperty": "data_inicio_operacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data inicio operacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_inicio_operacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information inicio operacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact inicio operacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info inicio operacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic inicio operacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document inicio operacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure inicio operacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record inicio operacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "estaçõe.id_estacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Estações",
+			          "ConceptualProperty": "id_estacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id estacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_estacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification estacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity estacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier estacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential estacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chuva mensal (estação)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chuva mensal (estação)": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação.id_estacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chuva mensal (estação)",
+			          "ConceptualProperty": "id_estacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id estacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id_estacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification estacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity estacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier estacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential estacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chuva mensal (estação)",
+			          "ConceptualProperty": "mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "chuva_mensal_estação.total_mm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chuva mensal (estação)",
+			          "ConceptualProperty": "total_mm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total mm": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_mm": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "mm": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate mm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall mm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação.horas_com_registro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chuva mensal (estação)",
+			          "ConceptualProperty": "horas_com_registro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas com registro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora com registro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "horas_com_registro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação.horas_do_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chuva mensal (estação)",
+			          "ConceptualProperty": "horas_do_mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas do me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora do me": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "horas_do_mes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação.completude": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chuva mensal (estação)",
+			          "ConceptualProperty": "completude"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "completude": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação.classe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Chuva mensal (estação)",
+			          "ConceptualProperty": "classe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "classe": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "climatologia regional": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.nivel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "nivel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Escala": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.regiao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "regiao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "regiao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Região": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.mes_do_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "mes_do_ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "mes do ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me do ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_do_ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.chuva_media_mm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "chuva_media_mm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chuva media mm": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "chuva_media_mm": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.n_estacoe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "n_estacoes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "n estacoe": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "n_estacoes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.n_anos_min": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "n_anos_min"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "n anos min": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "n ano min": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "n_anos_min": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "n ano minimum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.n_anos_max": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "n_anos_max"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "n anos max": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "n ano max": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "n_anos_max": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "n ano maximum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.ano_inicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "ano_inicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano inicio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano_inicio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "climatologia_regional.ano_fim": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Climatologia regional",
+			          "ConceptualProperty": "ano_fim"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano fim": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano_fim": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mese": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Meses"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mese": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mese.mes_do_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Meses",
+			          "ConceptualProperty": "mes_do_ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes do ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me do ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_do_ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mese.mes_nome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Meses",
+			          "ConceptualProperty": "mes_nome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes nome": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me nome": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_nome": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mese.mes_abrev": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Meses",
+			          "ConceptualProperty": "mes_abrev"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes abrev": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me abrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_abrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mese.estacao_do_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Meses",
+			          "ConceptualProperty": "estacao_do_ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estacao do ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "estacao_do_ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.apagar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "apagar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "apagar": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.chuva_média_mensal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Chuva média mensal (mm)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chuva média mensal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "chuva média mensal (mm)": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "millimeter",
+			        "mm"
+			      ]
+			    },
+			    "medida.chuva_média_anual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Chuva média anual (mm)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chuva média anual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "chuva média anual (mm)": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "millimeter",
+			        "mm"
+			      ]
+			    },
+			    "medida.posição_do_mês": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Posição do mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "posição do mês": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cor_da_coluna": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Cor da coluna"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cor da coluna": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.mês_mais_chuvoso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Mês mais chuvoso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mês mais chuvoso": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.mês_mais_seco": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Mês mais seco"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mês mais seco": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.estações_usadas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Estações usadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estações usadas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.anos_por_estação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Tempo de coleta das estações (anos)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anos por estação": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.período_dos_dados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Período dos dados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "período dos dados": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "período dos frieze": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "período dos panel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "período dos molding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "período dos feature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "medida.concentração_nos_3_meses_mais_chuvosos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Concentração nos 3 meses mais chuvosos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "concentração nos 3 meses mais chuvosos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.participação_no_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Participação no ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "participação no ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "participação number ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "climatologia_regional_has_mese": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "mese": {
+			          "Target": {
+			            "Entity": "mese"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "mese"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_meses"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mese"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "meses_have_climatologia_regionals"
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação_has_estaçõe": {
+			      "Binding": {
+			        "ConceptualEntity": "Chuva mensal (estação)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "chuva_mensal_estação": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação"
+			          }
+			        },
+			        "estaçõe": {
+			          "Target": {
+			            "Entity": "estaçõe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chuva_mensal_estação"
+			            },
+			            "Object": {
+			              "Role": "estaçõe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chuva_mensal_estação_have_estações"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estaçõe"
+			            },
+			            "Object": {
+			              "Role": "chuva_mensal_estação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estações_have_chuva_mensal_estação"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_medida_participação_no_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "medida.participação_no_ano": {
+			          "Target": {
+			            "Entity": "medida.participação_no_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "medida.participação_no_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_participação_no_ano"
+			        }
+			      ]
+			    },
+			    "medida_has_concentração_nos_3_meses_mais_chuvosos": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.concentração_nos_3_meses_mais_chuvosos": {
+			          "Target": {
+			            "Entity": "medida.concentração_nos_3_meses_mais_chuvosos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.concentração_nos_3_meses_mais_chuvosos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_concentração_nos_3_meses_mais_chuvosos"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_medida_período_dos_dados": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "medida.período_dos_dados": {
+			          "Target": {
+			            "Entity": "medida.período_dos_dados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "medida.período_dos_dados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_período_dos_dados"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_medida_anos_por_estação": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "medida.anos_por_estação": {
+			          "Target": {
+			            "Entity": "medida.anos_por_estação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "medida.anos_por_estação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_anos_por_estação"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_medida_estações_usadas": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "medida.estações_usadas": {
+			          "Target": {
+			            "Entity": "medida.estações_usadas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "medida.estações_usadas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_estações_usadas"
+			        }
+			      ]
+			    },
+			    "medida_has_mês_mais_seco": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.mês_mais_seco": {
+			          "Target": {
+			            "Entity": "medida.mês_mais_seco"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.mês_mais_seco"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_mês_mais_seco"
+			        }
+			      ]
+			    },
+			    "medida_has_mês_mais_chuvoso": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.mês_mais_chuvoso": {
+			          "Target": {
+			            "Entity": "medida.mês_mais_chuvoso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.mês_mais_chuvoso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_mês_mais_chuvoso"
+			        }
+			      ]
+			    },
+			    "medida_has_cor_da_coluna": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.cor_da_coluna": {
+			          "Target": {
+			            "Entity": "medida.cor_da_coluna"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.cor_da_coluna"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_cor_da_coluna"
+			        }
+			      ]
+			    },
+			    "medida_has_posição_do_mês": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.posição_do_mês": {
+			          "Target": {
+			            "Entity": "medida.posição_do_mês"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.posição_do_mês"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_posição_do_mês"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_medida_chuva_média_anual": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "medida.chuva_média_anual": {
+			          "Target": {
+			            "Entity": "medida.chuva_média_anual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "medida.chuva_média_anual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_chuva_média_anual"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_medida_chuva_média_mensal": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "medida.chuva_média_mensal": {
+			          "Target": {
+			            "Entity": "medida.chuva_média_mensal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "medida.chuva_média_mensal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_chuva_média_mensal"
+			        }
+			      ]
+			    },
+			    "mese_has_estacao_do_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "Meses"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mese": {
+			          "Target": {
+			            "Entity": "mese"
+			          }
+			        },
+			        "mese.estacao_do_ano": {
+			          "Target": {
+			            "Entity": "mese.estacao_do_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mese"
+			            },
+			            "Object": {
+			              "Role": "mese.estacao_do_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "meses_have_estacao_do_anos"
+			        }
+			      ]
+			    },
+			    "mese_has_mes_abrev": {
+			      "Binding": {
+			        "ConceptualEntity": "Meses"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mese": {
+			          "Target": {
+			            "Entity": "mese"
+			          }
+			        },
+			        "mese.mes_abrev": {
+			          "Target": {
+			            "Entity": "mese.mes_abrev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mese"
+			            },
+			            "Object": {
+			              "Role": "mese.mes_abrev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "meses_have_mes_abrevs"
+			        }
+			      ]
+			    },
+			    "mese_has_mes_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "Meses"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mese": {
+			          "Target": {
+			            "Entity": "mese"
+			          }
+			        },
+			        "mese.mes_nome": {
+			          "Target": {
+			            "Entity": "mese.mes_nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mese"
+			            },
+			            "Object": {
+			              "Role": "mese.mes_nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "meses_have_mes_nome"
+			        }
+			      ]
+			    },
+			    "mese_has_mes_do_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "Meses"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mese": {
+			          "Target": {
+			            "Entity": "mese"
+			          }
+			        },
+			        "mese.mes_do_ano": {
+			          "Target": {
+			            "Entity": "mese.mes_do_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mese"
+			            },
+			            "Object": {
+			              "Role": "mese.mes_do_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "meses_have_mes_do_anos"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_ano_fim": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "climatologia_regional.ano_fim": {
+			          "Target": {
+			            "Entity": "climatologia_regional.ano_fim"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional.ano_fim"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_ano_fims"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_ano_inicio": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "climatologia_regional.ano_inicio": {
+			          "Target": {
+			            "Entity": "climatologia_regional.ano_inicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional.ano_inicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_ano_inicios"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_n_anos_max": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "climatologia_regional.n_anos_max": {
+			          "Target": {
+			            "Entity": "climatologia_regional.n_anos_max"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional.n_anos_max"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_n_anos_maxes"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_n_anos_min": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "climatologia_regional.n_anos_min": {
+			          "Target": {
+			            "Entity": "climatologia_regional.n_anos_min"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional.n_anos_min"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_n_anos_mins"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_n_estacoe": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "climatologia_regional.n_estacoe": {
+			          "Target": {
+			            "Entity": "climatologia_regional.n_estacoe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional.n_estacoe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_n_estacoes"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_chuva_media_mm": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "climatologia_regional.chuva_media_mm": {
+			          "Target": {
+			            "Entity": "climatologia_regional.chuva_media_mm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional.chuva_media_mm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_chuva_media_mms"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_regiao": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "climatologia_regional.regiao": {
+			          "Target": {
+			            "Entity": "climatologia_regional.regiao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional.regiao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_regiaos"
+			        }
+			      ]
+			    },
+			    "climatologia_regional_has_nivel": {
+			      "Binding": {
+			        "ConceptualEntity": "Climatologia regional"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "climatologia_regional": {
+			          "Target": {
+			            "Entity": "climatologia_regional"
+			          }
+			        },
+			        "climatologia_regional.nivel": {
+			          "Target": {
+			            "Entity": "climatologia_regional.nivel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "climatologia_regional"
+			            },
+			            "Object": {
+			              "Role": "climatologia_regional.nivel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "climatologia_regionals_have_nivels"
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação_has_classe": {
+			      "Binding": {
+			        "ConceptualEntity": "Chuva mensal (estação)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "chuva_mensal_estação": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação"
+			          }
+			        },
+			        "chuva_mensal_estação.classe": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação.classe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chuva_mensal_estação"
+			            },
+			            "Object": {
+			              "Role": "chuva_mensal_estação.classe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chuva_mensal_estação_have_classes"
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação_has_completude": {
+			      "Binding": {
+			        "ConceptualEntity": "Chuva mensal (estação)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "chuva_mensal_estação": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação"
+			          }
+			        },
+			        "chuva_mensal_estação.completude": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação.completude"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chuva_mensal_estação"
+			            },
+			            "Object": {
+			              "Role": "chuva_mensal_estação.completude"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chuva_mensal_estação_have_completudes"
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação_has_horas_do_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Chuva mensal (estação)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "chuva_mensal_estação": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação"
+			          }
+			        },
+			        "chuva_mensal_estação.horas_do_me": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação.horas_do_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chuva_mensal_estação"
+			            },
+			            "Object": {
+			              "Role": "chuva_mensal_estação.horas_do_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chuva_mensal_estação_have_horas_do_me"
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação_has_horas_com_registro": {
+			      "Binding": {
+			        "ConceptualEntity": "Chuva mensal (estação)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "chuva_mensal_estação": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação"
+			          }
+			        },
+			        "chuva_mensal_estação.horas_com_registro": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação.horas_com_registro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chuva_mensal_estação"
+			            },
+			            "Object": {
+			              "Role": "chuva_mensal_estação.horas_com_registro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chuva_mensal_estação_have_horas_com_registros"
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação_has_total_mm": {
+			      "Binding": {
+			        "ConceptualEntity": "Chuva mensal (estação)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "chuva_mensal_estação": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação"
+			          }
+			        },
+			        "chuva_mensal_estação.total_mm": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação.total_mm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chuva_mensal_estação"
+			            },
+			            "Object": {
+			              "Role": "chuva_mensal_estação.total_mm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chuva_mensal_estação_have_total_mms"
+			        }
+			      ]
+			    },
+			    "chuva_mensal_estação_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Chuva mensal (estação)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "chuva_mensal_estação": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação"
+			          }
+			        },
+			        "chuva_mensal_estação.me": {
+			          "Target": {
+			            "Entity": "chuva_mensal_estação.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "chuva_mensal_estação"
+			            },
+			            "Object": {
+			              "Role": "chuva_mensal_estação.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "chuva_mensal_estação_have_me"
+			        }
+			      ]
+			    },
+			    "estaçõe_has_id_estacao": {
+			      "Binding": {
+			        "ConceptualEntity": "Estações"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "estaçõe": {
+			          "Target": {
+			            "Entity": "estaçõe"
+			          }
+			        },
+			        "estaçõe.id_estacao": {
+			          "Target": {
+			            "Entity": "estaçõe.id_estacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estaçõe"
+			            },
+			            "Object": {
+			              "Role": "estaçõe.id_estacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estações_have_id_estacaos"
+			        }
+			      ]
+			    },
+			    "estaçõe_has_data_inicio_operacao": {
+			      "Binding": {
+			        "ConceptualEntity": "Estações"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "estaçõe": {
+			          "Target": {
+			            "Entity": "estaçõe"
+			          }
+			        },
+			        "estaçõe.data_inicio_operacao": {
+			          "Target": {
+			            "Entity": "estaçõe.data_inicio_operacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estaçõe"
+			            },
+			            "Object": {
+			              "Role": "estaçõe.data_inicio_operacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estações_have_data_inicio_operacaos"
+			        }
+			      ]
+			    },
+			    "estaçõe_has_altitude_m": {
+			      "Binding": {
+			        "ConceptualEntity": "Estações"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "estaçõe": {
+			          "Target": {
+			            "Entity": "estaçõe"
+			          }
+			        },
+			        "estaçõe.altitude_m": {
+			          "Target": {
+			            "Entity": "estaçõe.altitude_m"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estaçõe"
+			            },
+			            "Object": {
+			              "Role": "estaçõe.altitude_m"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estações_have_altitude_m"
+			        }
+			      ]
+			    },
+			    "estaçõe_has_situacao": {
+			      "Binding": {
+			        "ConceptualEntity": "Estações"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "estaçõe": {
+			          "Target": {
+			            "Entity": "estaçõe"
+			          }
+			        },
+			        "estaçõe.situacao": {
+			          "Target": {
+			            "Entity": "estaçõe.situacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estaçõe"
+			            },
+			            "Object": {
+			              "Role": "estaçõe.situacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estações_have_situacaos"
+			        }
+			      ]
+			    },
+			    "estaçõe_has_id_municipio": {
+			      "Binding": {
+			        "ConceptualEntity": "Estações"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "estaçõe": {
+			          "Target": {
+			            "Entity": "estaçõe"
+			          }
+			        },
+			        "estaçõe.id_municipio": {
+			          "Target": {
+			            "Entity": "estaçõe.id_municipio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estaçõe"
+			            },
+			            "Object": {
+			              "Role": "estaçõe.id_municipio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estações_have_id_municipios"
+			        }
+			      ]
+			    },
+			    "estaçõe_has_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "Estações"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "estaçõe": {
+			          "Target": {
+			            "Entity": "estaçõe"
+			          }
+			        },
+			        "estaçõe.nome": {
+			          "Target": {
+			            "Entity": "estaçõe.nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estaçõe"
+			            },
+			            "Object": {
+			              "Role": "estaçõe.nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estações_have_nome"
+			        }
+			      ]
+			    },
+			    "estaçõe_has_codigo": {
+			      "Binding": {
+			        "ConceptualEntity": "Estações"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "estaçõe": {
+			          "Target": {
+			            "Entity": "estaçõe"
+			          }
+			        },
+			        "estaçõe.codigo": {
+			          "Target": {
+			            "Entity": "estaçõe.codigo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "estaçõe"
+			            },
+			            "Object": {
+			              "Role": "estaçõe.codigo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "estações_have_codigos"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

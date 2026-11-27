@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "6e7b9bf02e5e042ed576",
   "position": {
-    "x": 10,
-    "y": 0,
-    "z": 0,
-    "height": 280,
-    "width": 280,
+    "x": 15.867768595041323,
+    "y": 343.320811419985,
+    "z": 12000,
+    "height": 212.0510894064613,
+    "width": 201.95341848234409,
     "tabOrder": 0
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "Climatologia regional.nivel",
-              "nativeQueryRef": "nivel",
-              "active": true
+              "nativeQueryRef": "Escala",
+              "active": true,
+              "displayName": "Escala"
             }
           ]
         }
@@ -94,7 +95,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'macrorregião'"
+                                "Value": "'estado'"
                               }
                             }
                           ]
@@ -103,6 +104,32 @@
                     }
                   }
                 ]
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "22D"
+                }
               }
             }
           }

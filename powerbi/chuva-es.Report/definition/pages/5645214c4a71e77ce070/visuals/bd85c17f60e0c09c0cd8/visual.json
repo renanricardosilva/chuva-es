@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "bd85c17f60e0c09c0cd8",
   "position": {
-    "x": 1200.4173913043478,
-    "y": 0,
-    "z": 4,
-    "height": 230,
-    "width": 230
+    "x": 16.109839816933636,
+    "y": 199.1762013729977,
+    "z": 2000,
+    "height": 133.27231121281463,
+    "width": 260.68649885583523,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -32,7 +33,56 @@
         }
       }
     },
-    "autoSelectVisualType": true,
+    "objects": {
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Mês mais chuvoso"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Mês mais chuvoso"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   }
 }

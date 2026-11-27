@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "0649a4e6e7c1046eb2eb",
   "position": {
-    "x": 509.21739130434781,
-    "y": 0,
-    "z": 10,
-    "height": 230,
-    "width": 230
+    "x": 830.38901601830662,
+    "y": 199.1762013729977,
+    "z": 8000,
+    "height": 133.27231121281463,
+    "width": 260.68649885583523,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -31,6 +32,63 @@
           ]
         }
       }
+    },
+    "objects": {
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Concentração nos 3 meses mais chuvosos"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Concentração nos 3 meses mais chuvosos"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Concentração nos 3 meses mais chuvosos"
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

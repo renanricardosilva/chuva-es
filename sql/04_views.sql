@@ -56,6 +56,7 @@ COMMENT ON VIEW vw_climatologia_mensal_estacao IS
     'Chuva média de cada mês do ano, por estação, com os meses válidos (inclusive os de baixa confiança). Só entram estações com pelo menos 5 anos válidos naquele mês (ADR 0004).';
 
 -- Climatologia mensal por região: média simples entre as estações da região (ADR 0004)
+-- e, no nível do estado, média simples das macrorregiões (ADR 0005)
 CREATE OR REPLACE VIEW vw_climatologia_mensal_regiao AS
 WITH estacao_regiao AS (
     SELECT c.*,
@@ -66,21 +67,32 @@ WITH estacao_regiao AS (
     JOIN dim_municipio    AS mu USING (id_municipio)
     JOIN dim_microrregiao AS mi USING (id_microrregiao)
     JOIN dim_macrorregiao AS ma USING (id_macrorregiao)
+),
+macro AS (
+    SELECT macrorregiao AS regiao, mes_do_ano,
+           avg(chuva_media_mm) AS chuva_media_mm,
+           count(*)        AS n_estacoes,
+           min(n_anos)     AS n_anos_min,
+           max(n_anos)     AS n_anos_max,
+           min(ano_inicio) AS ano_inicio,
+           max(ano_fim)    AS ano_fim
+    FROM estacao_regiao
+    GROUP BY macrorregiao, mes_do_ano
 )
-SELECT 'macrorregião' AS nivel, macrorregiao AS regiao, mes_do_ano,
-       avg(chuva_media_mm) AS chuva_media_mm,
-       count(*)    AS n_estacoes,
-       min(n_anos) AS n_anos_min,
-       max(n_anos) AS n_anos_max,
-       min(ano_inicio) AS ano_inicio,
-       max(ano_fim)    AS ano_fim
-FROM estacao_regiao
-GROUP BY macrorregiao, mes_do_ano
+SELECT 'macrorregião' AS nivel, regiao, mes_do_ano,
+       chuva_media_mm, n_estacoes, n_anos_min, n_anos_max, ano_inicio, ano_fim
+FROM macro
 UNION ALL
 SELECT 'microrregião', microrregiao, mes_do_ano,
        avg(chuva_media_mm), count(*), min(n_anos), max(n_anos), min(ano_inicio), max(ano_fim)
 FROM estacao_regiao
-GROUP BY microrregiao, mes_do_ano;
+GROUP BY microrregiao, mes_do_ano
+UNION ALL
+SELECT 'estado', 'Espírito Santo', mes_do_ano,
+       avg(chuva_media_mm), sum(n_estacoes)::bigint, min(n_anos_min), max(n_anos_max), min(ano_inicio), max(ano_fim)
+FROM macro
+GROUP BY mes_do_ano
+HAVING count(*) = (SELECT count(*) FROM dim_macrorregiao);
 
 COMMENT ON VIEW vw_climatologia_mensal_regiao IS
-    'Chuva média de cada mês do ano por macro e microrregião: média simples das climatologias das estações da região (ADR 0004), com o número de estações, o mínimo e o máximo de anos usados e o primeiro e o último ano com dados das estações da região.';
+    'Chuva média de cada mês do ano por estado, macro e microrregião. Regiões: média simples das climatologias das estações da região (ADR 0004). Estado: média simples das climatologias das macrorregiões, só nos meses em que todas têm valor (ADR 0005). Inclui o número de estações, o mínimo e o máximo de anos usados e o primeiro e o último ano com dados.';

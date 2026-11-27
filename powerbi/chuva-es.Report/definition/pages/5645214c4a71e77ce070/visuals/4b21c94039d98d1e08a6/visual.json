@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "4b21c94039d98d1e08a6",
   "position": {
-    "x": 739.61739130434773,
-    "y": 0,
-    "z": 3,
-    "height": 230,
-    "width": 230
+    "x": 557.98627002288322,
+    "y": 199.1762013729977,
+    "z": 1000,
+    "height": 133.27231121281463,
+    "width": 260.68649885583523,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -32,7 +33,84 @@
         }
       }
     },
-    "autoSelectVisualType": true,
+    "objects": {
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Chuva média anual (mm)"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Chuva média anual (mm)"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Chuva média anual (mm)"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   }
 }

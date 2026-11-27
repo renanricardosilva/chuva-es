@@ -2,6 +2,10 @@
 
 *Pipeline automatizado de dados de chuva do INMET para o Espírito Santo — Python, PostgreSQL/PostGIS, QGIS e Power BI.*
 
+![Painel de chuva do ES: chuva média mensal, meses mais chuvosos e mais secos e comparação entre regiões](docs/img/painel-pagina-1.png)
+
+*Página 1 do painel no Power BI (história de usuário 2), aberta na média do estado.*
+
 ## Por que este projeto
 
 As chuvas no Espírito Santo apresentam regionalidades ao longo do território, variando muito entre litoral, região serrana e norte do estado, mas a rede de monitoramento automáticas do INMET tem apenas 11 estações em solo capixaba. Transformar esses registros em informação por região apoia decisões sobre estiagem, eventos extremos e gestão ambiental — como as que envolvem a SEAMA e sua Gerência de Gestão e Qualidade Ambiental.

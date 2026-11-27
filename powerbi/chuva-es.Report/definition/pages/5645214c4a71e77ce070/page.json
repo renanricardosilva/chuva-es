@@ -4,5 +4,32 @@
   "displayName": "Período chuvoso e seco",
   "displayOption": "FitToPage",
   "height": 1080,
-  "width": 1920
+  "width": 1920,
+  "visualInteractions": [
+    {
+      "source": "357d4cfca4f74b3a675d",
+      "target": "6e7b9bf02e5e042ed576",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6e7b9bf02e5e042ed576",
+      "target": "32b43aa10503f1280692",
+      "type": "NoFilter"
+    },
+    {
+      "source": "6e7b9bf02e5e042ed576",
+      "target": "0d0d7bbb4e20870bf1ed",
+      "type": "NoFilter"
+    },
+    {
+      "source": "357d4cfca4f74b3a675d",
+      "target": "0d0d7bbb4e20870bf1ed",
+      "type": "NoFilter"
+    },
+    {
+      "source": "357d4cfca4f74b3a675d",
+      "target": "32b43aa10503f1280692",
+      "type": "NoFilter"
+    }
+  ]
 }
