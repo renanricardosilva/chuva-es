@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "357d4cfca4f74b3a675d",
   "position": {
-    "x": 15.247058823529411,
-    "y": 574.30588235294113,
+    "x": 15.867768595041323,
+    "y": 568.35462058602559,
     "z": 13000,
-    "height": 492.9882352941176,
-    "width": 202.02352941176468,
+    "height": 499.11344853493614,
+    "width": 201.95341848234409,
     "tabOrder": 13000
   },
   "visual": {
@@ -108,7 +108,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Espírito Santo'"
+                                "Value": "'Central'"
                               }
                             }
                           ]

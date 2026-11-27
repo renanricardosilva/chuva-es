@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "6e7b9bf02e5e042ed576",
   "position": {
-    "x": 14.645308924485125,
-    "y": 342.70022883295195,
+    "x": 15.867768595041323,
+    "y": 343.320811419985,
     "z": 12000,
-    "height": 222.60869565217391,
-    "width": 202.10526315789471,
+    "height": 212.0510894064613,
+    "width": 201.95341848234409,
     "tabOrder": 0
   },
   "visual": {
@@ -95,7 +95,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'estado'"
+                                "Value": "'macrorregião'"
                               }
                             }
                           ]

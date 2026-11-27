@@ -1136,7 +1136,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Anos por estação"
+			          "ConceptualProperty": "Tempo de coleta das estações (anos)"
 			        }
 			      },
 			      "State": "Generated",

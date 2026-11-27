@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Anos por estação"
+                  "Property": "Tempo de coleta das estações (anos)"
                 }
               },
               "queryRef": "Medidas.Anos por estação",
-              "nativeQueryRef": "Anos por estação"
+              "nativeQueryRef": "Tempo de coleta das estações (anos)"
             }
           ]
         }
@@ -128,6 +128,20 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Anos por estação"
           }
         }
       ]
