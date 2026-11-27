@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "8f7723dbe0907cf2f80a",
   "position": {
-    "x": 970.01739130434771,
-    "y": 0,
-    "z": 5,
-    "height": 230,
-    "width": 230
+    "x": 285.58352402745993,
+    "y": 199.1762013729977,
+    "z": 3000,
+    "height": 133.27231121281463,
+    "width": 260.68649885583523,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -32,7 +33,56 @@
         }
       }
     },
-    "autoSelectVisualType": true,
+    "objects": {
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Mês mais seco"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   }
 }

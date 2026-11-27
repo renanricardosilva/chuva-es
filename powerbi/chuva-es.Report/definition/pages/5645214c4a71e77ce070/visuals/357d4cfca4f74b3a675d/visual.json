@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
-  "name": "620993291e6b0b3825fd",
+  "name": "357d4cfca4f74b3a675d",
   "position": {
-    "x": 10,
-    "y": 290,
-    "z": 1,
-    "height": 280,
-    "width": 280,
-    "tabOrder": 1
+    "x": 15.247058823529411,
+    "y": 574.30588235294113,
+    "z": 13000,
+    "height": 492.9882352941176,
+    "width": 202.02352941176468,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "slicer",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "Climatologia regional.regiao",
-              "nativeQueryRef": "regiao",
-              "active": true
+              "nativeQueryRef": "Região",
+              "active": true,
+              "displayName": "Região"
             }
           ]
         }
@@ -48,13 +49,26 @@
           }
         }
       ],
-      "selection": [
+      "items": [
         {
           "properties": {
-            "strictSingleSelect": {
+            "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "22D"
                 }
               }
             }
@@ -94,7 +108,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Sul'"
+                                "Value": "'Espírito Santo'"
                               }
                             }
                           ]
@@ -103,6 +117,21 @@
                     }
                   }
                 ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
               }
             }
           }

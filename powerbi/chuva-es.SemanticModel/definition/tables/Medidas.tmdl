@@ -15,9 +15,8 @@ table Medidas
 	measure 'Chuva média anual (mm)' =
 			
 			CALCULATE ( [Chuva média mensal (mm)], REMOVEFILTERS ( Meses ) )
+		formatString: #,0
 		lineageTag: 8ffc67a4-1441-45af-965d-7bb85de902b3
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Posição do mês' =
 			
@@ -82,6 +81,16 @@ table Medidas
 			DIVIDE ( [Chuva média mensal (mm)], [Chuva média anual (mm)] )
 		formatString: 0%;-0%;0%
 		lineageTag: 878a315a-45b9-49fd-b3a0-3a7e158f07f0
+
+	measure 'Chuva anual do estado (mm)' =
+			
+			CALCULATE (
+			    [Chuva média anual (mm)],
+			    REMOVEFILTERS ( 'Climatologia regional' ),
+			    'Climatologia regional'[nivel] = "estado"
+			)
+		formatString: 0
+		lineageTag: c4e9e8ef-7417-4eb3-b682-4a90c0958b99
 
 	column apagar
 		isHidden

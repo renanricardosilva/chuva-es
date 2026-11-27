@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "e5ee5504cee14e09c8f6",
   "position": {
-    "x": 1429.1478260869565,
-    "y": 0,
-    "z": 7,
-    "height": 230,
-    "width": 230
+    "x": 1641.7391304347825,
+    "y": 199.1762013729977,
+    "z": 5000,
+    "height": 133.27231121281463,
+    "width": 260.68649885583523,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -32,7 +33,56 @@
         }
       }
     },
-    "autoSelectVisualType": true,
+    "objects": {
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Período dos dados"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Período dos dados"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   }
 }
